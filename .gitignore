@@ -1,0 +1,11 @@
+### Solver Rest API
+*/__pycache__/
+*/.pyc
+*/.pyo
+*/.pyd
+*/.pytest_cache/
+*/.vscode/
+skyes-rest-api-venv
+
+# Jupyter Notebook artifacts
+*/.ipynb_checkpoints/

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  skyes-rest-api:
+    container_name: skyes-rest-api
+    build:
+      context: .
+      dockerfile: skyes-rest-api/Dockerfile          
+    ports:
+      - "8080:8080"

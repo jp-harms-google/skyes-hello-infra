@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:  
+  labels:
+    app: skyes-rest-api
+  name: skyes-rest-api
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: skyes-rest-api
+  type: ClusterIP

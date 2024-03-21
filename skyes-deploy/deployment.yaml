@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: skyes-rest-api
+  name: skyes-rest-api 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skyes-rest-api
+  template:
+    metadata:
+      labels:
+        app: skyes-rest-api
+    spec:
+      containers:
+      - image: us-east4-docker.pkg.dev/sky-solver-dev/solver-dto-tests/skyes-infra_skyes-rest-api:latest
+        name: skyes-rest-api
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: "1"
+            memory: "100Mi"
+          requests:
+            cpu: 500m
